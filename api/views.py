@@ -1,6 +1,11 @@
 from rest_framework import status, generics
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from api.models import TestSuite, TestCase
 from api.serializers import TestSuiteSerializer, TestCaseSerializer
+from testsuite.nist.frequency_monobit_test import FrequencyMonobitTest
+from testsuite.nist.frequency_test_within_a_block import FrequencyTestWithinABlock
 
 
 # Create your views here.
@@ -38,3 +43,10 @@ class TestCaseList(generics.ListCreateAPIView):
 class TestCaseDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TestCaseSerializer
     queryset = TestCase.objects.all()
+
+class TestResult(APIView):
+    def put(self, request):
+        formatted_sequence = [int(bit) for bit in request.data['bit_sequence']]
+        test_results = FrequencyTestWithinABlock.run_test(formatted_sequence)
+        return Response(test_results, status=status.HTTP_200_OK)
+
