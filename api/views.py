@@ -6,6 +6,7 @@ from api.models import TestSuite, TestCase
 from api.serializers import TestSuiteSerializer, TestCaseSerializer
 from testsuite.nist.frequency_monobit_test import FrequencyMonobitTest
 from testsuite.nist.frequency_test_within_a_block import FrequencyTestWithinABlock
+from testsuite.config import run_test
 
 
 # Create your views here.
@@ -46,7 +47,24 @@ class TestCaseDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class TestResult(APIView):
     def put(self, request):
-        formatted_sequence = [int(bit) for bit in request.data['bit_sequence']]
-        test_results = FrequencyTestWithinABlock.run_test(formatted_sequence)
-        return Response(test_results, status=status.HTTP_200_OK)
+        try:
+            formatted_sequence = [int(bit) for bit in request.data['bit_sequence']]
+            test_list = request.data['test_list']
+            test_results = []
+            for test_name in test_list:
+                test_result = run_test(test_name, formatted_sequence)
+                test_results.append(test_result)
+            return Response({
+                "results": test_results,
+                "count": len(test_results),
+                "sequence_length": len(formatted_sequence)
+            }, status=status.HTTP_200_OK)
+        except KeyError as e:
+            return Response({
+                "error": f"Champ manquant: {str(e)}"
+            }, status=status.HTTP_400_BAD_REQUEST)
 
+        except Exception as e:
+            return Response({
+                "error": f"Erreur lors de l'exécution des tests: {str(e)}"
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

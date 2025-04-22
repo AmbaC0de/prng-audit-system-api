@@ -45,6 +45,17 @@ randaudit/
 - `GET /api/test-suites/{id}` - Affiche les détails d'une batterie spécifique
 - `PUT /api/test-suites/{id}` - Met à jour une batterie existante
 - `DELETE /api/test-suites/{id}` - Supprime une batterie de tests
+- `PUT /api/run-tests` - Execute les tests sur la sequence
+```json
+{
+   "bit_sequence" : "0101101000111",
+   "test_list" : [
+      "frequency_monobit",
+      "run",
+      "frequency_within_a_block"
+   ]
+}
+```
 
 ### Cas de tests (Test Cases)
 - `GET /api/test-suites/{suite_id}/test-cases` - Liste tous les cas de tests d'une batterie
