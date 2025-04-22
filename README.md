@@ -48,11 +48,11 @@ randaudit/
 - `PUT /api/run-tests` - Execute les tests sur la sequence
 ```json
 {
-   "bit_sequence" : "0101101000111",
+   "bit_sequence" : "1100100100001111110110101010001000100001011010001100001000110100110001001100011001100010100010111000",
    "test_list" : [
       "frequency_monobit",
-      "run",
-      "frequency_within_a_block"
+      "runs",
+      "block_frequency"
    ]
 }
 ```
