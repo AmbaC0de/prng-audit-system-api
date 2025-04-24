@@ -1,5 +1,6 @@
 from testsuite.nist.frequency_monobit_test import FrequencyMonobitTest
 from testsuite.nist.frequency_test_within_a_block import FrequencyTestWithinABlock
+from testsuite.nist.longest_run_of_one_in_a_block_test import LongestRunOfOneInABlockTest
 from testsuite.nist.runs_test import RunsTest
 from testsuite.test_utils.response import TestResponse
 
@@ -8,7 +9,8 @@ from testsuite.test_utils.response import TestResponse
 TEST_FUNCTIONS = {
     'frequency_monobit': FrequencyMonobitTest.run_test,
     'block_frequency': FrequencyTestWithinABlock.run_test,
-    'runs': RunsTest.run_test
+    'runs': RunsTest.run_test,
+    'longest_runs': LongestRunOfOneInABlockTest.run_test
     # Ajoutez ici d'autres tests
 }
 

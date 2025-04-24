@@ -48,16 +48,19 @@ class TestCaseDetail(generics.RetrieveUpdateDestroyAPIView):
 class TestResult(APIView):
     def put(self, request):
         try:
-            formatted_sequence = [int(bit) for bit in request.data['bit_sequence']]
+            # Convertir la séquence en liste d'entiers si elle est donnée comme chaîne
+            bit_sequence = request.data['bit_sequence']
+            if isinstance(request.data['bit_sequence'], str):
+                bit_sequence = [int(bit) for bit in request.data['bit_sequence']]
             test_list = request.data['test_list']
             test_results = []
             for test_name in test_list:
-                test_result = run_test(test_name, formatted_sequence)
+                test_result = run_test(test_name, bit_sequence)
                 test_results.append(test_result)
             return Response({
                 "results": test_results,
                 "count": len(test_results),
-                "sequence_length": len(formatted_sequence)
+                "sequence_length": len(bit_sequence)
             }, status=status.HTTP_200_OK)
         except KeyError as e:
             return Response({

@@ -74,13 +74,13 @@ randaudit/
 ### Installation
 1. Cloner le dépôt :
    ```
-   git clone [URL_DU_REPO]
+   git clone https://github.com/AmbaC0de/prng-audit-system-api.git
    cd randaudit
    ```
 
 2. Créer et activer un environnement virtuel :
    ```
-   python -m venv venv
+   python -m venv .venv
    source venv/bin/activate  # Sur Windows : venv\Scripts\activate
    ```
 
