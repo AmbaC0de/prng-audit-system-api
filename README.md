@@ -56,7 +56,8 @@ randaudit/
       "longest_runs",
       "non_overlapping_template_matching",
       "binary_matrix_rank",
-      "linear_complexity"
+      "linear_complexity",
+      "serial"
    ]
 }
 ```
