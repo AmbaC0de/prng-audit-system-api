@@ -54,7 +54,8 @@ randaudit/
       "runs",
       "block_frequency",
       "longest_runs",
-      "non_overlapping_template_matching"
+      "non_overlapping_template_matching",
+      "binary_matrix_rank"
    ]
 }
 ```
