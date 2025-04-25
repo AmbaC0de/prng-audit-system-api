@@ -1,3 +1,2 @@
-django
-rest_framework
+djangorestframework
 scipy
