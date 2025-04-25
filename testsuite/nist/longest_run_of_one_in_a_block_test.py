@@ -31,24 +31,24 @@ class LongestRunOfOneInABlockTest:
                     error=True,
                     error_message="La séquence est trop courte (minimum 128 bits requis)"
                 )
-            elif n < 6272:
+            elif 128 <= n < 6272:
                 M = 8
                 K = 3
                 N = 16
                 v_values = [1, 2, 3, 4]  # v0, v1, v2, v3 où v0 est ≤1, v3 est ≥4
                 pi_values = [0.2148, 0.3672, 0.2305, 0.1875]
-            elif n < 750000:
+            elif 6272 <= n < 750000:
                 M = 128
                 K = 5
                 N = 49
                 v_values = [4, 5, 6, 7, 8, 9]  # v0, v1, v2, v3, v4, v5 où v0 est ≤4, v5 est ≥9
-                pi_values = None  # Ces valeurs doivent être obtenues de la Section 3.4 du document NIST
+                pi_values = [ 0.1174,  0.2430, 0.2493, 0.1752,  0.1027,  0.1124]  # Ref Section 3.4 du document NIST
             else:
                 M = 10000
                 K = 6
                 N = 75
                 v_values = [10, 11, 12, 13, 14, 15, 16]  # v0, v1, v2, v3, v4, v5, v6 où v0 est ≤10, v6 est ≥16
-                pi_values = None  # Ces valeurs doivent être obtenues de la Section 3.4 du document NIST
+                pi_values = [ 0.0882,  0.2092,  0.2483,  0.1933,  0.1208, 0.0675,  0.0727]  # Ref Section 3.4 du document NIST
 
             # Si les pi_values ne sont pas disponibles, nous ne pouvons pas effectuer le test
             if pi_values is None:
