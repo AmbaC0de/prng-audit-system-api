@@ -1,6 +1,7 @@
 from testsuite.nist.binary_matrix_rank_test import BinaryMatrixRankTest
 from testsuite.nist.frequency_monobit_test import FrequencyMonobitTest
 from testsuite.nist.frequency_test_within_a_block import FrequencyTestWithinABlock
+from testsuite.nist.linear_complexity_test import LinearComplexityTest
 from testsuite.nist.longest_run_of_one_in_a_block_test import LongestRunOfOneInABlockTest
 from testsuite.nist.non_overlapping_template_matching_test import NonOverlappingTemplateMatchingTest
 from testsuite.nist.runs_test import RunsTest
@@ -15,6 +16,8 @@ TEST_FUNCTIONS = {
     'longest_runs': LongestRunOfOneInABlockTest.run_test,
     'non_overlapping_template_matching': NonOverlappingTemplateMatchingTest.run_test,
     'binary_matrix_rank': BinaryMatrixRankTest.run_test,
+    'linear_complexity': LinearComplexityTest.run_test,
+
     # Ajoutez ici d'autres tests
 }
 
