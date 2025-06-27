@@ -35,7 +35,7 @@ class LongestRunOfOneInABlockTest:
                 M = 8
                 K = 3
                 N = 16
-                v_values = [1, 2, 3, 4]  # v0, v1, v2, v3 où v0 est ≤1, v3 est ≥4
+                v_values = [1, 2, 3, 4]  # v0, v1, v2, v3 où v0 ≤ 1, v3  ≥4
                 pi_values = [0.2148, 0.3672, 0.2305, 0.1875]
             elif 6272 <= n < 750000:
                 M = 128
