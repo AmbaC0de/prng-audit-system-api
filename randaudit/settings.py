@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api'
+    'api',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'randaudit.urls'
@@ -122,3 +125,27 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Pour le développement - PERMISSIF
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8081",  # Expo web
+    "http://127.0.0.1:8081",
+    "http://192.168.1.9:8081",  # Remplacez par votre IP locale si nécessaire
+]
+
+# Ou encore plus permissif pour le dev (à éviter en prod)
+CORS_ALLOW_ALL_ORIGINS = True  # Seulement pour le développement !
+
+# Headers autorisés
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]

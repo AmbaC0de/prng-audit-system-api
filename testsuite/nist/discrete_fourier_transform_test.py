@@ -25,11 +25,11 @@ class DiscreteFourierTransformTest:
             n = len(bit_sequence)
 
             # Vérification de la longueur minimale
-            # if n < 100:
-            #     return response_handler.get_response(
-            #         error=True,
-            #         error_message="La séquence est trop courte (minimum 100 bits requis)"
-            #     )
+            if n < 100:
+                return response_handler.get_response(
+                    error=True,
+                    error_message="La séquence est trop courte (minimum 100 bits requis)"
+                )
 
             # Étape 1: Conversion des 0 et 1 en valeurs -1 et +1
             X = [2*bit - 1 for bit in bit_sequence]

@@ -7,6 +7,7 @@ from testsuite.nist.non_overlapping_template_matching_test import NonOverlapping
 from testsuite.nist.runs_test import RunsTest
 from testsuite.nist.serial_test import SerialTest
 from testsuite.nist.discrete_fourier_transform_test import DiscreteFourierTransformTest
+from testsuite.nist.overlapping_template_matching_test import OverlappingTemplateMatchingTest
 from testsuite.test_utils.response import TestResponse
 
 
@@ -20,7 +21,8 @@ TEST_FUNCTIONS = {
     'binary_matrix_rank': BinaryMatrixRankTest.run_test,
     'linear_complexity': LinearComplexityTest.run_test,
     'serial': SerialTest.run_test,
-    'dft_spectral': DiscreteFourierTransformTest.run_test
+    'dft_spectral': DiscreteFourierTransformTest.run_test,
+    'overlapping_template_matching': OverlappingTemplateMatchingTest.run_test
     # Ajoutez ici d'autres tests
 }
 
