@@ -2,6 +2,7 @@ from testsuite.test_utils.response import TestResponse
 import math
 import numpy as np
 import scipy.special
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class LongestRunOfOneInABlockTest:
@@ -101,11 +102,11 @@ class LongestRunOfOneInABlockTest:
             p_value = scipy.special.gammaincc(K / 2, chi_squared / 2)
 
             # Détermination du résultat
-            is_random = p_value >= decision_rule
+            test_status = TestStatusDeterminer.determine_status(p_value)
 
             return response_handler.get_response(
                 p_value=p_value,
-                is_random=is_random,
+                test_status=test_status,
                 # additional_data={
                 #     "chi_squared": chi_squared,
                 #     "block_size": M,

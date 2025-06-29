@@ -2,6 +2,7 @@ from testsuite.test_utils.response import TestResponse
 import math
 import numpy as np
 import scipy.special
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class OverlappingTemplateMatchingTest:
@@ -115,11 +116,11 @@ class OverlappingTemplateMatchingTest:
             p_value = scipy.special.gammaincc(K / 2.0, chi_squared / 2.0)
 
             # Détermination du résultat
-            is_random = p_value >= decision_rule
+            test_status = TestStatusDeterminer.determine_status(p_value)
 
             return response_handler.get_response(
                 p_value=p_value,
-                is_random=is_random,
+                test_status=test_status,
                 additional_info={
                     "chi_squared": chi_squared,
                     "template": template,

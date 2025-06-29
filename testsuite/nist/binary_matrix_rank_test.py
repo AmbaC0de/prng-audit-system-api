@@ -1,6 +1,7 @@
 from testsuite.test_utils.response import TestResponse
 import numpy as np
-
+import math
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class BinaryMatrixRankTest:
@@ -70,15 +71,14 @@ class BinaryMatrixRankTest:
             )
 
             # Calculer la P-value
-            import math
             p_value = math.exp(-chi_square / 2)
 
             # Détermination du résultat
-            is_random = p_value >= decision_rule
+            test_status = TestStatusDeterminer.determine_status(p_value)
 
             return response_handler.get_response(
                 p_value=p_value,
-                is_random=is_random,
+                test_status=test_status,
                 additional_info={
                     "matrices_count": N,
                     "full_rank_count": FM,

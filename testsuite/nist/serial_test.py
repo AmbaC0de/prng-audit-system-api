@@ -1,6 +1,6 @@
 import scipy.special
-
 from testsuite.test_utils.response import TestResponse
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class SerialTest:
@@ -118,11 +118,11 @@ class SerialTest:
             p_value2 = scipy.special.gammaincc(2**(m-3), del2_psi_sq_m/2) if m >= 2 else 1.0
 
             # Décision finale (la séquence est considérée aléatoire si les deux p-values sont >= decision_rule)
-            is_random = p_value1 >= decision_rule and p_value2 >= decision_rule
+            test_status = TestStatusDeterminer.determine_status([p_value1, p_value2])
 
             return response_handler.get_response(
                 p_value=[p_value1, p_value2],
-                is_random=is_random,
+                test_status=test_status,
                 additional_info={
                     "m": m,
                     "psi_sq_m": psi_sq_m,

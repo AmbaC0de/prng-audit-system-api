@@ -41,9 +41,11 @@ class TestCaseList(generics.ListCreateAPIView):
         test_suite_id = self.kwargs['pk']
         return TestCase.objects.filter(test_suite_id=test_suite_id)
 
+
 class TestCaseDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TestCaseSerializer
     queryset = TestCase.objects.all()
+
 
 # class TestResult(APIView):
 #     def put(self, request):
@@ -71,8 +73,9 @@ class TestCaseDetail(generics.RetrieveUpdateDestroyAPIView):
 #             return Response({
 #                 "error": f"Erreur lors de l'exécution des tests: {str(e)}"
 #             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 class TestResult(APIView):
-    def put(self, request):
+    def post(self, request):
         try:
             bit_sequence = None
 

@@ -1,5 +1,7 @@
 from testsuite.test_utils.response import TestResponse
 import scipy
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
+
 
 
 
@@ -36,11 +38,11 @@ class FrequencyTestWithinABlock:
 
             x_2_observation = 4 * block_size * observation
             p_value = 1 - scipy.special.gammainc(number_of_blocks/2, x_2_observation/2)
-            is_random = p_value >= decision_rule
+            test_status = TestStatusDeterminer.determine_status(p_value)
 
             return response_handler.get_response(
                 p_value=p_value,
-                is_random=is_random
+                test_status=test_status,
             )
         except Exception as e:
             return response_handler.get_response(

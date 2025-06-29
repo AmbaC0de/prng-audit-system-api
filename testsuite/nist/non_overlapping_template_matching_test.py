@@ -1,6 +1,6 @@
 from testsuite.test_utils.response import TestResponse
 import scipy.special
-
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class NonOverlappingTemplateMatchingTest:
@@ -91,11 +91,11 @@ class NonOverlappingTemplateMatchingTest:
             p_value = scipy.special.gammaincc(N / 2, chi_square / 2)
 
             # Détermination du résultat
-            is_random = p_value >= decision_rule
+            test_status = TestStatusDeterminer.determine_status(p_value)
 
             return response_handler.get_response(
                 p_value=p_value,
-                is_random=is_random,
+                test_status=test_status,
                 additional_info={
                     "number_of_blocks": N,
                     "block_size": M,

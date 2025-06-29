@@ -1,6 +1,7 @@
 import math
-
 from testsuite.test_utils.response import TestResponse
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
+
 
 class FrequencyMonobitTest:
     DEFAULT_DECISION_RULE = 0.01
@@ -42,11 +43,11 @@ class FrequencyMonobitTest:
             p_value = math.erfc(s_obs / math.sqrt(2))
 
             # Détermination du résultat
-            is_random = p_value >= decision_rule
+            test_status = TestStatusDeterminer.determine_status(p_value)
 
             return response_handler.get_response(
                 p_value=p_value,
-                is_random=is_random
+                test_status=test_status,
             )
 
         except Exception as e:

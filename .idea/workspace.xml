@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="feat: Discrete Fourier Transform (Spectral) Test">
-      <change afterPath="$PROJECT_DIR$/testsuite/nist/overlapping_template_matching_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="feat: add cors handle for local development">
+      <change afterPath="$PROJECT_DIR$/testsuite/test_utils/nist_parameters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuite/test_utils/test_status_determiner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/randaudit/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/randaudit/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/binary_matrix_rank_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/binary_matrix_rank_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsuite/nist/discrete_fourier_transform_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/discrete_fourier_transform_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/frequency_monobit_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/frequency_monobit_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/frequency_test_within_a_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/frequency_test_within_a_block.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/linear_complexity_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/linear_complexity_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/longest_run_of_one_in_a_block_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/longest_run_of_one_in_a_block_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/non_overlapping_template_matching_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/non_overlapping_template_matching_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/overlapping_template_matching_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/overlapping_template_matching_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/runs_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/runs_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/serial_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/serial_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/test_utils/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/test_utils/response.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751138810161</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: add cors handle for local development">
+      <option name="closed" value="true" />
+      <created>1751146236184</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751146236184</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +238,7 @@
     <MESSAGE value="fix: idea config" />
     <MESSAGE value="fix: misc" />
     <MESSAGE value="feat: Discrete Fourier Transform (Spectral) Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Discrete Fourier Transform (Spectral) Test" />
+    <MESSAGE value="feat: add cors handle for local development" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add cors handle for local development" />
   </component>
 </project>

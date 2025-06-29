@@ -1,6 +1,7 @@
 from testsuite.test_utils.response import TestResponse
 import math
 import scipy
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class RunsTest:
@@ -57,11 +58,11 @@ class RunsTest:
             p_value = 1 - scipy.special.erf(test_statistic)
 
             # Détermination du résultat
-            is_random = p_value >= decision_rule
+            test_status = TestStatusDeterminer.determine_status(p_value)
 
             return response_handler.get_response(
                 p_value=p_value,
-                is_random=is_random,
+                test_status=test_status,
             )
 
 

@@ -1,8 +1,10 @@
+from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
+
 class TestResponse:
     def __init__(self, test_name=""):
         self.test_name = test_name
 
-    def get_response(self, p_value=None, is_random=None, error=None, error_message=None, additional_info=None):
+    def get_response(self, p_value=None, test_status=None, error=None, error_message=None, additional_info=None):
         """
         Génère une réponse standardisée pour les tests statistiques
 
@@ -21,15 +23,15 @@ class TestResponse:
                 "error": True,
                 "message": error_message or "Une erreur s'est produite lors du test",
                 "p_value": None,
-                "is_random": False,
+                "test_status": "error",
                 "test_name": self.test_name
             }
 
         response = {
             "error": False,
             "p_value": p_value,
-            "is_random": is_random,
-            "message": "La séquence est aléatoire" if is_random else "La séquence n'est pas aléatoire",
+            "test_status": test_status,
+            "message": TestStatusDeterminer.get_status_message(test_status),
             "test_name": self.test_name,
         }
 
