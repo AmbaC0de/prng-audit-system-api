@@ -132,7 +132,8 @@ class SerialTest:
                     "del2_psi_sq_m": del2_psi_sq_m if m >= 2 else "N/A",
                     "p_value1": p_value1,
                     "p_value2": p_value2,
-                    "message": f"Le test génère deux p-values. La séquence est considérée aléatoire si les deux p-values sont ≥ au seuil de décision({decision_rule})."
+                    "message": f"Le test génère deux p-values. La séquence est considérée aléatoire si les deux "
+                               f"p-values sont ≥ au seuil de décision({decision_rule})."
                 }
             )
 
