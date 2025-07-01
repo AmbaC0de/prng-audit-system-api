@@ -58,7 +58,10 @@ randaudit/
       "non_overlapping_template_matching",
       "binary_matrix_rank",
       "linear_complexity",
-      "serial"
+      "serial",
+      "dft_spectral",
+      "overlapping_template_matching",
+      "maurer"
    ]
 }
 ```

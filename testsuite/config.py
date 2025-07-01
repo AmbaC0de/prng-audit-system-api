@@ -8,6 +8,7 @@ from testsuite.nist.runs_test import RunsTest
 from testsuite.nist.serial_test import SerialTest
 from testsuite.nist.discrete_fourier_transform_test import DiscreteFourierTransformTest
 from testsuite.nist.overlapping_template_matching_test import OverlappingTemplateMatchingTest
+from testsuite.nist.maurer_universal_statistical_test import MaurerUniversalTest
 from testsuite.test_utils.response import TestResponse
 
 
@@ -22,7 +23,8 @@ TEST_FUNCTIONS = {
     'linear_complexity': LinearComplexityTest.run_test,
     'serial': SerialTest.run_test,
     'dft_spectral': DiscreteFourierTransformTest.run_test,
-    'overlapping_template_matching': OverlappingTemplateMatchingTest.run_test
+    'overlapping_template_matching': OverlappingTemplateMatchingTest.run_test,
+    'maurer': MaurerUniversalTest.run_test
     # Ajoutez ici d'autres tests
 }
 
@@ -31,6 +33,7 @@ def get_available_tests():
     Renvoie la liste des tests disponibles
     """
     return list(TEST_FUNCTIONS.keys())
+
 
 def run_test(test_name, bit_sequence, **kwargs):
     """

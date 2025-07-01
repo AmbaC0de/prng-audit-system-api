@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="feat: add cors handle for local development">
-      <change afterPath="$PROJECT_DIR$/testsuite/test_utils/nist_parameters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuite/test_utils/test_status_determiner.py" afterDir="false" />
+    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="fix: misc">
+      <change afterPath="$PROJECT_DIR$/testsuite/nist/maurer_universal_statistical_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/binary_matrix_rank_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/binary_matrix_rank_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/discrete_fourier_transform_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/discrete_fourier_transform_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/frequency_monobit_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/frequency_monobit_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/frequency_test_within_a_block.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/frequency_test_within_a_block.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/linear_complexity_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/linear_complexity_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/longest_run_of_one_in_a_block_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/longest_run_of_one_in_a_block_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/non_overlapping_template_matching_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/non_overlapping_template_matching_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/overlapping_template_matching_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/overlapping_template_matching_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/runs_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/runs_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/serial_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/serial_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/test_utils/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/test_utils/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +65,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projets/MemoryProject/backend/DjangoProjects&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projets/MemoryProject/backend/DjangoProjects/randaudit&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -83,7 +74,7 @@
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.3045977&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager">
@@ -130,6 +121,7 @@
       <workItem from="1745415777899" duration="3665000" />
       <workItem from="1745498839303" duration="8094000" />
       <workItem from="1745580254584" duration="8327000" />
+      <workItem from="1751211882619" duration="870000" />
     </task>
     <task id="LOCAL-00001" summary="feat: longest run of one in a block test">
       <option name="closed" value="true" />
@@ -211,7 +203,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751146236184</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: improve response with status key">
+      <option name="closed" value="true" />
+      <created>1751202723098</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751202723098</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1751202939611</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751202939611</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,9 +244,10 @@
     <MESSAGE value="feat: linear complexity test" />
     <MESSAGE value="feat: serial test" />
     <MESSAGE value="fix: idea config" />
-    <MESSAGE value="fix: misc" />
     <MESSAGE value="feat: Discrete Fourier Transform (Spectral) Test" />
     <MESSAGE value="feat: add cors handle for local development" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add cors handle for local development" />
+    <MESSAGE value="feat: improve response with status key" />
+    <MESSAGE value="fix: misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
   </component>
 </project>
