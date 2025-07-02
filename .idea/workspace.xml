@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="feat: Cumulative Sums (Cusum) Test">
-      <change afterPath="$PROJECT_DIR$/testsuite/nist/random_excursions_test.py" afterDir="false" />
+    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="feat: Random Excursions Test">
+      <change afterPath="$PROJECT_DIR$/testsuite/nist/random_excursions_variant_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsuite/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/config.py" afterDir="false" />
     </list>
@@ -247,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751459654072</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: Random Excursions Test">
+      <option name="closed" value="true" />
+      <created>1751475511544</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1751475511544</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +288,7 @@
     <MESSAGE value="chore: idea file" />
     <MESSAGE value="feat: Approximate Entropy Test" />
     <MESSAGE value="feat: Cumulative Sums (Cusum) Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Cumulative Sums (Cusum) Test" />
+    <MESSAGE value="feat: Random Excursions Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Random Excursions Test" />
   </component>
 </project>
