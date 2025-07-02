@@ -61,7 +61,8 @@ randaudit/
       "serial",
       "dft_spectral",
       "overlapping_template_matching",
-      "maurer"
+      "maurer",
+      "entropy"
    ]
 }
 ```

@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="fix: misc">
-      <change afterPath="$PROJECT_DIR$/testsuite/nist/maurer_universal_statistical_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="chore: idea file">
+      <change afterPath="$PROJECT_DIR$/testsuite/nist/approximate_entropy_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsuite/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +216,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751202939611</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: Test statistique universel de Maurer">
+      <option name="closed" value="true" />
+      <created>1751412726989</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751412726989</updated>
+    </task>
+    <task id="LOCAL-00014" summary="chore: idea file">
+      <option name="closed" value="true" />
+      <created>1751412749013</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751412749014</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +261,8 @@
     <MESSAGE value="feat: add cors handle for local development" />
     <MESSAGE value="feat: improve response with status key" />
     <MESSAGE value="fix: misc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
+    <MESSAGE value="feat: Test statistique universel de Maurer" />
+    <MESSAGE value="chore: idea file" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: idea file" />
   </component>
 </project>
