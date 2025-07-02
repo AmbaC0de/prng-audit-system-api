@@ -11,7 +11,7 @@ class RandomExcursionsTest:
 
     @staticmethod
     def run_test(bit_sequence: list[int], decision_rule=DEFAULT_DECISION_RULE):
-        response_handler = TestResponse("Test d'excursion aleatoire")
+        response_handler = TestResponse("Test d'excursion aléatoire")
 
         try:
             n = len(bit_sequence)

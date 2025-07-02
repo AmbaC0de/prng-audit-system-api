@@ -4,17 +4,13 @@ from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class FrequencyMonobitTest:
-    DEFAULT_DECISION_RULE = 0.01
-
     @staticmethod
-    def run_test(bit_sequence: list[int], decision_rule=DEFAULT_DECISION_RULE):
+    def run_test(bit_sequence: list[int]):
         """
         Effectue le test de fréquence monobit NIST sur une séquence de bits.
 
         Args:
             bit_sequence(list[int] or str): La séquence de bits à tester (liste ou chaîne de '0' et '1')
-            decision_rule(float): Seuil de décision pour le test (default: 0.01)
-
         Returns:
             dict: Résultats du test contenant la p-value et la décision (True si la séquence passe le test)
         """

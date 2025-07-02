@@ -3,6 +3,7 @@ from scipy.stats import norm
 from testsuite.test_utils.response import TestResponse
 from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
+
 class CumulativeSumsTest:
     DEFAULT_DECISION_RULE = 0.01
 
@@ -39,16 +40,13 @@ class CumulativeSumsTest:
         Returns:
             dict: p-values (forward/backward) et statut de test
         """
-        response = TestResponse("Cumulative Sums (Cusum) Test")
+        response = TestResponse("Test de somme cumulative")
         try:
             n = len(bit_sequence)
-            if n < 1:
-                return response.get_response(error=True, error_message="Séquence trop courte")
 
-            if not all(b in (0,1) for b in bit_sequence):
+            if not all(b in (0, 1) for b in bit_sequence):
                 return response.get_response(error=True, error_message="Bits invalides (attendu 0 ou 1)")
 
-            # Convert bits (0->-1, 1->+1)
             X = [2*b - 1 for b in bit_sequence]
 
             # test avant (forward) et arrière (backward)

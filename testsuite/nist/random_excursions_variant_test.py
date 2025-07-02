@@ -17,7 +17,7 @@ class RandomExcursionsVariantTest:
         Returns:
             dict: Résultats du test contenant les p-values pour chaque état et la décision
         """
-        response_handler = TestResponse('Test Random Excursions Variant')
+        response_handler = TestResponse('Test des excursions aléatoires – variante')
 
         try:
             n = len(bit_sequence)
