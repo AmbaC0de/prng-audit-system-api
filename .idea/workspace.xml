@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="chore: idea file">
-      <change afterPath="$PROJECT_DIR$/testsuite/nist/approximate_entropy_test.py" afterDir="false" />
+    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="feat: Approximate Entropy Test">
+      <change afterPath="$PROJECT_DIR$/testsuite/nist/cumulative_sums_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsuite/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751412749014</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: Approximate Entropy Test">
+      <option name="closed" value="true" />
+      <created>1751458530937</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1751458530937</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +270,7 @@
     <MESSAGE value="fix: misc" />
     <MESSAGE value="feat: Test statistique universel de Maurer" />
     <MESSAGE value="chore: idea file" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: idea file" />
+    <MESSAGE value="feat: Approximate Entropy Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Approximate Entropy Test" />
   </component>
 </project>
