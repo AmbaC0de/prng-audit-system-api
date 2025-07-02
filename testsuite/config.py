@@ -11,6 +11,7 @@ from testsuite.nist.overlapping_template_matching_test import OverlappingTemplat
 from testsuite.nist.maurer_universal_statistical_test import MaurerUniversalTest
 from testsuite.nist.approximate_entropy_test import ApproximateEntropyTest
 from testsuite.nist.cumulative_sums_test import CumulativeSumsTest
+from testsuite.nist.random_excursions_test import RandomExcursionsTest
 from testsuite.test_utils.response import TestResponse
 
 
@@ -28,7 +29,8 @@ TEST_FUNCTIONS = {
     'overlapping_template_matching': OverlappingTemplateMatchingTest.run_test,
     'maurer': MaurerUniversalTest.run_test,
     'entropy': ApproximateEntropyTest.run_test,
-    'cusum': CumulativeSumsTest.run_test
+    'cusum': CumulativeSumsTest.run_test,
+    'random_excursion': RandomExcursionsTest.run_test
     # Ajoutez ici d'autres tests
 }
 
