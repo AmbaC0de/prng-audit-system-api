@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="feat: Random Excursions variant Test">
+    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="fix: misc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/cumulative_sums_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/cumulative_sums_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/frequency_monobit_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/frequency_monobit_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/random_excursions_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/random_excursions_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/random_excursions_variant_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/random_excursions_variant_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751481547069</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1751492392564</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1751492392564</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,13 +298,13 @@
     <MESSAGE value="feat: Discrete Fourier Transform (Spectral) Test" />
     <MESSAGE value="feat: add cors handle for local development" />
     <MESSAGE value="feat: improve response with status key" />
-    <MESSAGE value="fix: misc" />
     <MESSAGE value="feat: Test statistique universel de Maurer" />
     <MESSAGE value="chore: idea file" />
     <MESSAGE value="feat: Approximate Entropy Test" />
     <MESSAGE value="feat: Cumulative Sums (Cusum) Test" />
     <MESSAGE value="feat: Random Excursions Test" />
     <MESSAGE value="feat: Random Excursions variant Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Random Excursions variant Test" />
+    <MESSAGE value="fix: misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
   </component>
 </project>
