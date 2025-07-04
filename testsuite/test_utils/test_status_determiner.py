@@ -5,8 +5,8 @@ class TestStatusDeterminer:
     """
 
     STATUS_MESSAGES = {
-            "success": "La séquence est aléatoire",
-            "failed": "La séquence n'est pas aléatoire",
+            "success": "La séquence est aléatoire pour ce test",
+            "failed": "La séquence n'est pas aléatoire pour ce test",
             "warning": "La séquence présente des résultats ambigus (proche du seuil de décision)"
         }
 
