@@ -80,12 +80,10 @@ class BinaryMatrixRankTest:
                 p_value=p_value,
                 test_status=test_status,
                 additional_info={
-                    "matrices_count": N,
-                    "full_rank_count": FM,
-                    "full_rank_minus_one_count": FM1,
-                    "lower_rank_count": remaining,
-                    "chi_square": chi_square,
-                    "matrix_dimensions": f"{M}x{Q}"
+                    "Nombre total de matrices analysées": N,
+                    "Rangs observés": f"{FM} matrices de rang complet, {FM1} de rang {M - 1}, {remaining} de rang inférieur",
+                    "Dimensions des matrices": f"{M}x{Q}",
+                    "Statistique khi-deux": round(chi_square, 4)
                 }
             )
 

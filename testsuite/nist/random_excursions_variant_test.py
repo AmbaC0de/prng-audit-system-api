@@ -89,8 +89,12 @@ class RandomExcursionsVariantTest:
                 p_value=p_values.values(),
                 test_status=test_status,
                 additional_info={
-                    "p-values": p_values,
-                    "test-results": test_results
+                    "P-valeurs par état": {
+                        f"État {k.replace('state_', '')}": round(v, 5) for k, v in p_values.items()
+                    },
+                    "Résultat individuel par état": {
+                        f"État {k.replace('state_', '')}": test_results[k] for k in test_results
+                    }
                 }
             )
 

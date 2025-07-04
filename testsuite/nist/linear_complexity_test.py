@@ -84,11 +84,10 @@ class LinearComplexityTest:
                 p_value=p_value,
                 test_status=test_status,
                 additional_info={
-                    "block_size": M,
-                    "number_of_blocks": N,
-                    "theoretical_mean": mu,
-                    "chi_square": chi_square,
-                    "frequency_count": v
+                    "Méthode": "Vérifie si la séquence peut être prédite facilement à l’aide d’un registre à décalage"
+                               " linéaire. Si c’est le cas, elle est peu aléatoire",
+                    "Taille des blocs": M,
+                    "Nombre de blocs": N,
                 }
             )
         except Exception as e:

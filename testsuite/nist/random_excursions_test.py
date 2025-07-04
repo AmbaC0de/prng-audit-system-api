@@ -86,8 +86,9 @@ class RandomExcursionsTest:
                 p_value=min_p_value,
                 test_status=test_status,
                 additional_info={
-                    "p_values_par_etat": p_values,
-                    "etats_exclus": skipped_states
+                    "P-valeurs par état": {
+                        f"État {state}": round(p_val, 5) for state, p_val in p_values.items()
+                    }
                 }
             )
 

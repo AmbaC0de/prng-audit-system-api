@@ -4,10 +4,9 @@ from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class SerialTest:
-    DEFAULT_DECISION_RULE = 0.01
 
     @staticmethod
-    def run_test(bit_sequence: list[int], m=3, decision_rule=DEFAULT_DECISION_RULE):
+    def run_test(bit_sequence: list[int], m=3):
         """
         Effectue le test sériel NIST sur une séquence de bits pour vérifier l'uniformité
         de distribution des motifs de m bits.
@@ -15,7 +14,6 @@ class SerialTest:
         Args:
             bit_sequence (list[int]): La séquence de bits à tester
             m (int): Longueur des motifs à analyser (default: 3)
-            decision_rule (float): Seuil de décision pour le test (default: 0.01)
 
         Returns:
             dict: Résultats du test contenant les p-values et la décision
@@ -124,16 +122,10 @@ class SerialTest:
                 p_value=[p_value1, p_value2],
                 test_status=test_status,
                 additional_info={
-                    "m": m,
-                    "psi_sq_m": psi_sq_m,
-                    "psi_sq_m1": psi_sq_m1,
-                    "psi_sq_m2": psi_sq_m2 if m >= 2 else "N/A",
-                    "del_psi_sq_m": del_psi_sq_m,
-                    "del2_psi_sq_m": del2_psi_sq_m if m >= 2 else "N/A",
-                    "p_value1": p_value1,
-                    "p_value2": p_value2,
-                    "message": f"Le test génère deux p-values. La séquence est considérée aléatoire si les deux "
-                               f"p-values sont ≥ au seuil de décision({decision_rule})."
+                    "P-valeurs": {
+                        "p-value 1 (Δψ²)": round(p_value1, 5),
+                        "p-value 2 (Δ²ψ²)": round(p_value2, 5) if m >= 2 else "N/A"
+                    },
                 }
             )
 

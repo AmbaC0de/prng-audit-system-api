@@ -58,6 +58,11 @@ class CumulativeSumsTest:
             return response.get_response(
                 p_value=[p_forward, p_backward],
                 test_status=status,
+                additional_info={
+                    "Méthode": "Somme cumulative appliquée dans les deux sens (avant/arrière)",
+                    "P-value avant": round(p_forward, 5),
+                    "P-value arrière": round(p_backward, 5)
+                }
             )
 
         except Exception as e:

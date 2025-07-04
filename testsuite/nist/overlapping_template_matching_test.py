@@ -6,10 +6,9 @@ from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class OverlappingTemplateMatchingTest:
-    DEFAULT_DECISION_RULE = 0.01
 
     @staticmethod
-    def run_test(bit_sequence: list[int], decision_rule=DEFAULT_DECISION_RULE, template=None):
+    def run_test(bit_sequence: list[int], template=None):
         """
         Effectue le test de correspondance de template avec chevauchement selon la méthode NIST SP 800-22.
 
@@ -122,15 +121,14 @@ class OverlappingTemplateMatchingTest:
                 p_value=p_value,
                 test_status=test_status,
                 additional_info={
-                    "chi_squared": chi_squared,
-                    "template": template,
-                    "template_length": m,
-                    "block_size": M,
-                    "num_blocks": N,
-                    "frequencies": v,
-                    "expected_frequencies": [N * pi[i] for i in range(K + 1)],
-                    "lambda": lambda_val,
-                    "eta": eta
+                    "Modèle recherché": ''.join(str(b) for b in template),
+                    "Longueur du modèle": m,
+                    "Taille des blocs": M,
+                    "Nombre de blocs analysés": N,
+                    "Total des occurrences par classe": v,
+                    "Fréquences attendues théoriques": [round(N * pi[i], 2) for i in range(K + 1)],
+                    "Espérance d’occurrence (λ)": round(lambda_val, 3),
+                    "Paramètre η": round(eta, 3)
                 }
             )
 

@@ -4,10 +4,9 @@ from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class NonOverlappingTemplateMatchingTest:
-    DEFAULT_DECISION_RULE = 0.01
 
     @staticmethod
-    def run_test(bit_sequence: list[int], template='000000001', decision_rule=DEFAULT_DECISION_RULE):
+    def run_test(bit_sequence: list[int], template='000000001'):
         """
         Effectue le test de non-chevauchement de modèles NIST sur une séquence de bits.
 
@@ -97,10 +96,10 @@ class NonOverlappingTemplateMatchingTest:
                 p_value=p_value,
                 test_status=test_status,
                 additional_info={
-                    "number_of_blocks": N,
-                    "block_size": M,
-                    "template": ''.join(str(bit) for bit in template),
-                    "template_occurrences": W
+                    "Motif recherché": ''.join(str(bit) for bit in template),
+                    "Nombre de blocs analysés": N,
+                    "Taille de chaque bloc": M,
+                    "Nombre total d’occurrences du motif": sum(W)
                 }
             )
 

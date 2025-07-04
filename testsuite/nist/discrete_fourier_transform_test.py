@@ -67,10 +67,12 @@ class DiscreteFourierTransformTest:
                 p_value=p_value,
                 test_status=test_status,
                 additional_info={
-                    "threshold_T": T,
-                    "expected_peaks_N0": N0,
-                    "observed_peaks_N1": N1,
-                    "normalized_statistic_d": d
+                    "Méthode": "Analyse spectrale basée sur la transformée de Fourier discrète",
+                    "Pics attendus (seuil 95%)": round(N0),
+                    "Pics observés sous le seuil": N1,
+                    "Seuil T": round(T, 2),
+                    "Statistique normalisée": round(d, 5),
+                    "Longueur de la séquence": n
                 }
             )
 

@@ -31,7 +31,7 @@ class MaurerUniversalTest:
         return None
 
     @staticmethod
-    def run_test(bit_sequence: list[int], decision_rule=DEFAULT_DECISION_RULE):
+    def run_test(bit_sequence: list[int]):
         """
         Effectue le test statistique universel de Maurer NIST sur une séquence de bits.
 
