@@ -70,9 +70,6 @@ class DiscreteFourierTransformTest:
                     "Méthode": "Analyse spectrale basée sur la transformée de Fourier discrète",
                     "Pics attendus (seuil 95%)": round(N0),
                     "Pics observés sous le seuil": N1,
-                    "Seuil T": round(T, 2),
-                    "Statistique normalisée": round(d, 5),
-                    "Longueur de la séquence": n
                 }
             )
 
