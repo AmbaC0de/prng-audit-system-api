@@ -122,10 +122,8 @@ class SerialTest:
                 p_value=[p_value1, p_value2],
                 test_status=test_status,
                 additional_info={
-                    "P-valeurs": {
-                        "p-value 1 (Δψ²)": round(p_value1, 5),
-                        "p-value 2 (Δ²ψ²)": round(p_value2, 5) if m >= 2 else "N/A"
-                    },
+                    "p-value 1 (Δψ²)": round(p_value1, 5),
+                    "p-value 2 (Δ²ψ²)": round(p_value2, 5) if m >= 2 else "N/A"
                 }
             )
 

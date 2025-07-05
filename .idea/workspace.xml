@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="fix: improve result message">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite/nist/discrete_fourier_transform_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/discrete_fourier_transform_test.py" afterDir="false" />
+    <list default="true" id="0d02da0b-dee1-4584-a1d2-e18425230923" name="Changes" comment="fix: misc">
+      <change beforePath="$PROJECT_DIR$/testsuite/nist/serial_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite/nist/serial_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751671929522</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1751673072500</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1751673072500</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,10 +335,10 @@
     <MESSAGE value="feat: Cumulative Sums (Cusum) Test" />
     <MESSAGE value="feat: Random Excursions Test" />
     <MESSAGE value="feat: Random Excursions variant Test" />
-    <MESSAGE value="fix: misc" />
     <MESSAGE value="fix: file upload" />
     <MESSAGE value="fix: improve additional info response" />
     <MESSAGE value="fix: improve result message" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: improve result message" />
+    <MESSAGE value="fix: misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
   </component>
 </project>

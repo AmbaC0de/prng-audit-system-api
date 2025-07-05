@@ -83,7 +83,6 @@ class BinaryMatrixRankTest:
                     "Nombre total de matrices analysées": N,
                     "Rangs observés": f"{FM} matrices de rang complet, {FM1} de rang {M - 1}, {remaining} de rang inférieur",
                     "Dimensions des matrices": f"{M}x{Q}",
-                    "Statistique khi-deux": round(chi_square, 4)
                 }
             )
 
