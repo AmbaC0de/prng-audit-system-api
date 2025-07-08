@@ -107,12 +107,6 @@ class LongestRunOfOneInABlockTest:
             return response_handler.get_response(
                 p_value=p_value,
                 test_status=test_status,
-                # additional_data={
-                #     "chi_squared": chi_squared,
-                #     "block_size": M,
-                #     "num_blocks": N,
-                #     "frequencies": v
-                # }
             )
 
         except Exception as e:

@@ -5,10 +5,9 @@ from testsuite.test_utils.test_status_determiner import TestStatusDeterminer
 
 
 class BinaryMatrixRankTest:
-    DEFAULT_DECISION_RULE = 0.01
 
     @staticmethod
-    def run_test(bit_sequence: list[int], decision_rule=DEFAULT_DECISION_RULE):
+    def run_test(bit_sequence: list[int]):
         """
         Effectue le test de rang de matrices binaires NIST sur une séquence de bits.
 

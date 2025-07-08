@@ -3,9 +3,14 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.models import TestSuite, TestCase
 from api.serializers import TestSuiteSerializer, TestCaseSerializer
-from testsuite.config import run_test
+from testsuite.config import run_test, run_tests_parallel
 from rest_framework.parsers import MultiPartParser, JSONParser
 import json
+from django.conf import settings
+import time
+from rest_framework.permissions import IsAuthenticated
+
+
 
 
 
@@ -48,9 +53,12 @@ class TestCaseDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class TestResult(APIView):
     parser_classes = [MultiPartParser, JSONParser]
+    # permission_classes = [IsAuthenticated]
 
     def post(self, request):
         try:
+            start_time = time.time()
+
             # --- Lecture et parsing de test_list ---
             raw_test_list = request.data.get("test_list")
             if isinstance(raw_test_list, str):
@@ -83,10 +91,24 @@ class TestResult(APIView):
                 test_result = run_test(test_name, bit_sequence)
                 test_results.append(test_result)
 
+            duration = time.time() - start_time
+
+            # --- Récupération des informations utilisateur ---
+            user = request.user
+            user_info = {
+                "id": user.id,
+                "username": user.username if user.username else None,
+                "first_name": user.first_name if user.first_name else None,
+                "last_name": user.last_name if user.last_name else None,
+                "last_login": user.last_login.isoformat() if user.last_login else None,
+            }
+
             return Response({
                 "results": test_results,
                 "count": len(test_results),
                 "sequence_length": len(bit_sequence),
+                "duration": self._format_time(duration),
+                "user_info": user_info
             })
 
         except ValueError as e:
@@ -95,3 +117,30 @@ class TestResult(APIView):
             return Response({
                 "error": f"Erreur lors de l'exécution des tests: {str(e)}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @staticmethod
+    def _format_time(seconds):
+        """
+        Formate le temps en secondes vers un format lisible
+
+        Args:
+            seconds (float): Temps en secondes
+
+        Returns:
+            str: Temps formaté (ex: "1.234s", "567ms", "2m 30s")
+        """
+        if seconds < 0.001:
+            return f"{seconds * 1000000:.0f}μs"
+        elif seconds < 1:
+            return f"{seconds * 1000:.0f}ms"
+        elif seconds < 60:
+            return f"{seconds:.3f}s"
+        elif seconds < 3600:
+            minutes = int(seconds // 60)
+            remaining_seconds = seconds % 60
+            return f"{minutes}m {remaining_seconds:.1f}s"
+        else:
+            hours = int(seconds // 3600)
+            minutes = int((seconds % 3600) // 60)
+            remaining_seconds = seconds % 60
+            return f"{hours}h {minutes}m {remaining_seconds:.1f}s"

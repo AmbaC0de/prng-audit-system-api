@@ -63,3 +63,54 @@ def run_test(test_name, bit_sequence, **kwargs):
             error=True,
             error_message=f"Test '{test_name}' non reconnu"
         )
+
+
+from concurrent.futures import ProcessPoolExecutor, as_completed
+import multiprocessing
+from django.http import JsonResponse
+
+
+def run_tests_parallel(test_list, bit_sequence, max_workers=None):
+    """
+    Exécute les tests en parallèle avec des processus séparés
+
+    Args:
+        test_list: Liste des noms de tests à exécuter
+        bit_sequence: Séquence de bits à tester
+        max_workers: Nombre maximum de processus (None = auto)
+    """
+    if max_workers is None:
+        # Utiliser le nombre de CPU disponibles, mais limiter à 8 max
+        max_workers = min(multiprocessing.cpu_count(), len(test_list), 8)
+
+    test_results = []
+
+    with ProcessPoolExecutor(max_workers=max_workers) as executor:
+        # Soumettre tous les tests
+        future_to_test = {
+            executor.submit(run_test, test_name, bit_sequence): test_name
+            for test_name in test_list
+        }
+
+        # Collecter les résultats au fur et à mesure
+        for future in as_completed(future_to_test):
+            test_name = future_to_test[future]
+            try:
+                result = future.result()
+                test_results.append(result)
+            except Exception as exc:
+                # Logger l'erreur
+                import logging
+                logging.error(f'Test {test_name} failed: {exc}')
+                # Ajouter un résultat d'erreur
+                test_results.append({
+                    'test_name': test_name,
+                    'error': True,
+                    'error_message': str(exc)
+                })
+
+    return {
+        "results": test_results,
+        "count": len(test_results),
+        "sequence_length": len(bit_sequence),
+    }
