@@ -2,13 +2,14 @@ from rest_framework import status, generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from api.models import TestSuite, TestCase
-from api.serializers import TestSuiteSerializer, TestCaseSerializer
+from api.serializers import TestSuiteSerializer, TestCaseSerializer, UserCreateSerializer
 from testsuite.config import run_test, run_tests_parallel
 from rest_framework.parsers import MultiPartParser, JSONParser
 import json
 from django.conf import settings
 import time
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from django.contrib.auth.models import User
 
 
 
@@ -144,3 +145,8 @@ class TestResult(APIView):
             minutes = int((seconds % 3600) // 60)
             remaining_seconds = seconds % 60
             return f"{hours}h {minutes}m {remaining_seconds:.1f}s"
+
+class UserCreateView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserCreateSerializer
+    permission_classes = [AllowAny]

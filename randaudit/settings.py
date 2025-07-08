@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'api',
     'corsheaders'
 ]
@@ -155,3 +156,13 @@ CORS_ALLOW_HEADERS = [
 # Configuration pour les tests parallèles
 TEST_PARALLEL_WORKERS = min(multiprocessing.cpu_count(), 6)  # Ajustez selon vos besoins
 TEST_TIMEOUT = 300  # Timeout global en secondes
+
+# Ajout de la configuration REST_FRAMEWORK pour TokenAuthentication
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
