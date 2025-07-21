@@ -14,6 +14,7 @@ from testsuite.nist.cumulative_sums_test import CumulativeSumsTest
 from testsuite.nist.random_excursions_test import RandomExcursionsTest
 from testsuite.nist.random_excursions_variant_test import RandomExcursionsVariantTest
 from testsuite.test_utils.response import TestResponse
+from testsuite.attack.berlekamp_massey import  BerlekampMassey
 
 
 # Dictionnaire qui mappe les noms de tests aux fonctions correspondantes
@@ -32,7 +33,8 @@ TEST_FUNCTIONS = {
     'entropy': ApproximateEntropyTest.run_test,
     'cusum': CumulativeSumsTest.run_test,
     'random_excursion': RandomExcursionsTest.run_test,
-    'random_excursion_variant': RandomExcursionsVariantTest.run_test
+    'random_excursion_variant': RandomExcursionsVariantTest.run_test,
+    'belkamp_massey': BerlekampMassey.run_test
     # Ajoutez ici d'autres tests
 }
 

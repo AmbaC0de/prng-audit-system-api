@@ -117,7 +117,6 @@ Pour exécuter les tests unitaires :
 
 ## Développement futur
 
-- Implémentation complète des algorithmes de test NIST
 - Intégration des tests FIPS 140-2
 - Support pour différents formats d'entrée de données
 - Génération de rapports détaillés au format PDF/HTML
